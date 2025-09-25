@@ -1,10 +1,13 @@
-name: Hello world workflow
+name: Hello World Workflow
+
 on:
-push:
-branches:[main]
+  push:
+    branches: [ "main" ]
+
 jobs:
-say-hello:
-run-on:ubuntu-latest
-steps:
-- name: print Hello
-run: echo "hello from github actions!!really?"
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions 👋"
